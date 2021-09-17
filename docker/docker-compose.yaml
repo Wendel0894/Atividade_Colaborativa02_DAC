@@ -1,0 +1,21 @@
+version: '3'
+services:   
+  core:
+    container_name: atividade2
+    image: wendel/atividade2
+    build: 
+      context: ../
+      dockerfile: ./docker/atividade2/Dockerfile
+    ports: 
+     - "8080:8080"
+     - "4848:4848" #acessa a pagina de gerenciamento do payara
+    depends_on: 
+     - banco
+    links: 
+     - "banco:host-banco"
+  banco:
+    container_name: banco
+    image: wendel/banco
+    build: ./postgres
+    ports: 
+    - "5433:5432"
