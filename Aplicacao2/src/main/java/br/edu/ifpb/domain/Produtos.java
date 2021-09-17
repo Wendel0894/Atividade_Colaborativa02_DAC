@@ -1,9 +1,10 @@
 
 package br.edu.ifpb.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
-public interface Produtos {
+public interface Produtos extends Serializable{
     
     public void adicionar(Produto produto);
     
