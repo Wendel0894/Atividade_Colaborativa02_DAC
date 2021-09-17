@@ -1,0 +1,11 @@
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/Clientes.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/infra/ProdutosEmJDBC.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/NovoCliente.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/AtualizarCliente.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/ListaDeClientes.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/RemoverCliente.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/Produtos.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/infra/ClientesEmJDBC.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/Produto.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/domain/Cliente.java
+/home/wendel/Atividade_Colaborativa02_DAC/Aplicacao2/src/main/java/br/edu/ifpb/jsf/ControladorDeClientes.java
