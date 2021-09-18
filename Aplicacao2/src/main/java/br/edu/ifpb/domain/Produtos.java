@@ -14,4 +14,6 @@ public interface Produtos extends Serializable{
     
     public List<Produto> todosOsProdutos();
     
+    public List<Produto> localizarProdutosPorDescricao(String descricao);
+    
 }

@@ -130,5 +130,36 @@ public class ProdutosEmJDBC implements Produtos {
         return new Produto(id, descricao, valor);
         
     }
+
+    @Override
+    public List<Produto> localizarProdutosPorDescricao(String descricao) {
+        
+         try {
+             
+             List<Produto> produtos = new ArrayList<>();
+             
+             PreparedStatement statement = connection.prepareStatement(
+                     "SELECT * FROM Produto WHERE Descricao = ?"
+             );
+             
+             statement.setString(1, descricao);
+             statement.executeQuery();
+             
+             ResultSet result = statement.getResultSet();
+             
+             while ( result.next() ) {
+                 produtos.add(
+                         criarProduto(result)
+                 );
+             }
+             
+             return produtos;
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(ProdutosEmJDBC.class.getName()).log(Level.SEVERE, null, ex);
+             return Collections.EMPTY_LIST;
+         }
+        
+    }
     
 }

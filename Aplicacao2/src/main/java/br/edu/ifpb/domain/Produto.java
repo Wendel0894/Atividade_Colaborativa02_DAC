@@ -3,7 +3,6 @@ package br.edu.ifpb.domain;
 
 import java.math.BigDecimal;
 
-
 public class Produto {
     
     private int id;

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Atividade 2</title>
+    </h:head>
+    <h:body>
+        
+            <h:form>
+                    <h3>Produtos Disponivéis: </h3> <br />
+
+                    <h:dataTable value="#{controladorDeProdutos.listar()}" var="produto" >
+
+                        <h:column>
+
+                            <f:facet name="header">Descricao</f:facet>
+                            #{produto.descricao}
+
+                        </h:column>
+
+                        <h:column>
+
+                            <f:facet name="header">Valor</f:facet>
+                            #{produto.valor}
+
+                        </h:column>
+
+                        <h:column>
+
+                            <h:commandButton value="Adicionar ao Carrinho" action="#{controladorDeCarrinhoDeCompras.adicionar(produto)}"/>
+
+                        </h:column>
+
+                    </h:dataTable>
+
+                    <br />
+            
+            </h:form>
+            <h:form>
+
+                    <h3>Carrinho de Compras: </h3>
+                
+                    <h:dataTable value="#{controladorDeCarrinhoDeCompras.listar()}" var="produtoAdicionado" >
+
+                        <h:column>
+
+                            <f:facet name="header">Descrição</f:facet>
+                            #{produtoAdicionado.descricao}
+
+                        </h:column>
+
+                        <h:column>
+
+                            <f:facet name="header">Valor</f:facet>
+                            #{produtoAdicionado.valor}
+
+                        </h:column>
+                       
+
+                    </h:dataTable>
+                     
+                    <h:commandButton value="Finalizar Carrinho" action="#{controladorDeCarrinhoDeCompras.concluir()}" />
+                   
+            </h:form>
+          
+    </h:body>
+    
+</html>
+

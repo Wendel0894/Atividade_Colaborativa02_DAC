@@ -1,11 +1,15 @@
+br/edu/ifpb/domain/Venda.class
 br/edu/ifpb/domain/AtualizarProduto.class
 br/edu/ifpb/jsf/ControladorDeClientes.class
+br/edu/ifpb/domain/LocalizarProdutos.class
 br/edu/ifpb/domain/NovoCliente.class
 br/edu/ifpb/domain/ListaDeClientes.class
+br/edu/ifpb/api/RosourcesDeProdutos.class
 br/edu/ifpb/domain/AtualizarCliente.class
 br/edu/ifpb/domain/Clientes.class
 br/edu/ifpb/domain/Cliente.class
 br/edu/ifpb/domain/Produto.class
+br/edu/ifpb/domain/Carrinho.class
 br/edu/ifpb/infra/ProdutosEmJDBC.class
 br/edu/ifpb/domain/ListaDeProdutos.class
 br/edu/ifpb/infra/ClientesEmJDBC.class
@@ -13,4 +17,7 @@ br/edu/ifpb/domain/Produtos.class
 br/edu/ifpb/jsf/ControladorDeProdutos.class
 br/edu/ifpb/domain/RemoverProduto.class
 br/edu/ifpb/domain/RemoverCliente.class
+br/edu/ifpb/jsf/ControladorDeCarrinhoDeCompras.class
+br/edu/ifpb/api/ApplicationConfig.class
+br/edu/ifpb/infra/CarrinhoDeCompras.class
 br/edu/ifpb/domain/AdicionarProduto.class
