@@ -4,14 +4,9 @@ package br.edu.ifpb.api;
 import br.edu.ifpb.domain.ListaDeProdutos;
 import br.edu.ifpb.domain.LocalizarProdutos;
 import br.edu.ifpb.domain.Produto;
-import java.util.ArrayList;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -19,7 +14,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 
-//@Stateless
 @Path("produtos") // locahost:8080/atividade2/api/produtos
 @Produces(MediaType.APPLICATION_JSON)
 public class RosourcesDeProdutos {

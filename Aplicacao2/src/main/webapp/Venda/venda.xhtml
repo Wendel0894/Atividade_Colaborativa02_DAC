@@ -1,20 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>Atividade 2</title>
-    </h:head>
-    <h:body>
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      template="../template.xhtml">
+
       
+    <ui:define name="center">
+        
+        
         <h:form rendered="#{controladorDeCarrinhoDeCompras.novaVenda.produtosComprados.size() > 0}">
            
-            <h2>Informações da venda: </h2>
+            <h2 class="header center orange-text">Informações da venda: </h2>
                    
             <h:dataTable 
                 value="#{controladorDeCarrinhoDeCompras.novaVenda.produtosComprados}"
-                var="produto"            
+                var="produto"
+                class="striped highlight"
             >
                 
                 <h:column>
@@ -35,19 +38,20 @@
             </h:dataTable>
             <br />
          
-            <h:outputText value="Valor total: #{controladorDeCarrinhoDeCompras.novaVenda.valorTotal}" /> <br />
+            <h:outputText value="Valor total: #{controladorDeCarrinhoDeCompras.novaVenda.valorTotal}" class="orange-text"/> <br />
             
-            <h:commandButton value="Concluir Compra" action="#{controladorDeCarrinhoDeCompras.concluirCompra()}"/>
+            <h:commandButton value="Concluir Compra" action="#{controladorDeCarrinhoDeCompras.concluirCompra()}" class="btn green white-text"/>
             
             
         </h:form>
         
         <h:outputText 
             rendered="#{controladorDeCarrinhoDeCompras.novaVenda.produtosComprados.size() == 0}" 
-            value="Opa, você precisa adicionar produtos ao carrinho de compra primeiro : ) " 
+            value="Opa, você precisa adicionar produtos ao carrinho de compra primeiro : ) "
+            class="header center orange-text"
         />
-          
-    </h:body>
-    
-</html>
+        
+    </ui:define>
+ 
+</ui:composition>
 

@@ -1,16 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>Teste</title>
-    </h:head>
-    <h:body>
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      template="../template.xhtml">
+    
+        
+    <ui:define name="center" >
         
         <h:form>
+        
+            <h2 class="header center orange-text" >Lista de produtos: </h2>
             
-            <h:dataTable value="#{controladorDeProdutos.listar()}" var="produto">
+            <h:dataTable value="#{controladorDeProdutos.listar()}" var="produto" class="striped highlight">
             
                 <h:column>
                     <f:facet name="header">Id</f:facet>
@@ -28,24 +31,25 @@
                 </h:column>
             
                 <h:column>
-                    <h:commandButton  value="editar" action="#{controladorDeProdutos.editar(produto)}"/>
+                    <h:commandButton  value="editar" action="#{controladorDeProdutos.editar(produto)}" class="btn blue white-text"/>
                 </h:column>
             
                 <h:column>
-                    <h:commandButton value="remover" action="#{controladorDeProdutos.remover(produto)}" />
+                    <h:commandButton value="remover" action="#{controladorDeProdutos.remover(produto)}" class="btn red white-text" />
                 </h:column>
             
             <br /> <br />
                        
         </h:dataTable>
         
-           <h:commandLink value="Voltar para a pagina de inserção" action="/Produto/edit?faces-redirect=true"/>
+            <h:commandLink value="Voltar para a pagina de inserção" action="/Produto/edit?faces-redirect=true" class="orange-text"/>
             
             
         </h:form>
         
-        
-    </h:body>
+    </ui:define>
     
-</html>
+    
+        
+</ui:composition>
 
